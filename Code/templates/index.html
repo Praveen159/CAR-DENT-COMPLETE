@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title> CAR DENT DETECTION </title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">CD Detect</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="test.html">Test</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="contact-us.html">Contact Us</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="container">
+      <div class="jumbotron">
+          <h1>Car Dent Detection.</h1>      
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda autem eos eaque ut a id inventore nisi atque tenetur aut, cum voluptatibus modi voluptatum totam nihil eius possimus? Explicabo, neque?</div>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <!-- <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="fileinput-preview thumbnail" data-trigger="fileinput" id="window"></div>
+              <div> -->
+        <h2>Car Dent Detection</h2>
+        <form action="output" method="POST" enctype="multipart/form-data" class="form-inline">
+          <!-- <span class="btn btn-default btn-file">
+                    <span class="fileinput-new">Select Image</span>
+                    <span class="fileinput-exists">Change</span>
+                    <input type="file" id="filename" name="file">
+                  </span>
+                  <button type="submit" class="btn btn-default fileinput-exists" id="analyze" onclick="loading();">Submit</button> -->
+          <div class="col-md-6 fileSelector">
+            <input type="file" class="form-control" id="images" name="file" multiple/>
+
+          </div>
+          <div class="col-md-4 uploadBtn">
+            <button type="submit" class="btn btn-labeled btn-primary" id="uploadImage">
+              <span class="btn-label">
+                <i class="glyphicon glyphicon-upload"></i>
+              </span>Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="row" id="image_preview"></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

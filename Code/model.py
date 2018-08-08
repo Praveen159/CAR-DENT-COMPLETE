@@ -15,7 +15,7 @@ def predic(img_path):
     #Damage._make_predict_function()
     predi_damage=Damage.predict(x)
     print("INDIAAAAAAAAAAAAAAAAAA")
-    if predi_damage<0.8:
+    if predi_damage<0.3:
         damag="Car Got Damaged"
         print("NOOOOOOOOOOOOOOOOOOO")
         predi_severe=Severe.predict(x)

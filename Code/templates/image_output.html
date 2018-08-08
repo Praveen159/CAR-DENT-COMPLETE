@@ -1,12 +1,75 @@
 <html>
-    <body>
-        <h1>
-        "CAR DENT"
-        </h1>
-        <p>{result}</p>
-        <p>{result_sever}<p>
-    
-    
-    </body>
-
+	<head>
+		
+		<title>CAR DENT DETECTION </title>
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+		
+	
+	
+	</head>
+	<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				
+				<h2> CAR DENT DETECTION <h2>
+				
+			</div>
+		</div>
+	</div>		
+	
+	
+		<h2> VERIFYING WHETHER CAR GOT DAMAGED OR NOT </h2>
+		
+		<p>
+		{{ result }}
+		</p>
+		
+		<!-- <h4>OUTPUT</h4> -->
+		{% if result|length > 1 %}
+		<table class="first">
+			<tr>
+				<th> DAMAGE ASSESMENT</th>
+				
+				<th> VALIDATION</th>
+			</tr>
+			
+			<tr>
+				<td>CAR VALIDATION </td>
+				
+				<td>{{ result[0] }}</td>
+			<tr>
+				<td>SEVERITY VALIDATION</td>
+				<td> Damaged With {{ result[1] }} Injuries </td>
+			</tr>
+			{% else %}
+			<tr>
+				<th> DAMAGE ASSESMENT</th>
+				
+				<th> VALIDATION</th>
+			</tr>
+			
+			<tr>
+				<td>CAR VALIDATION </td>
+				
+				<td>{{ result }}</td>
+			<tr>
+			
+			
+			
+		{% endif %}	
+			
+		</table>
+		
+		
+		
+	</body>
+	
+	
+	
+	
+	
+	
 </html>

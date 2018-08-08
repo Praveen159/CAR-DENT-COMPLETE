@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  <title> CAR DENT DETECTION </title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container .row {
+      margin-top: 30px;
+    }
+
+    div.scrolling-limit {
+      width: 500px;
+      height: 20px;
+      background-color: yellow;
+      overflow: hidden;
+      white-space: nowrap;
+
+    }
+
+    div.scrolling {
+      position: relative;
+      -webkit-animation: scroll 20s infinite linear;
+      ;
+      -moz-animation: scroll 20s infinite linear;
+      -o-animation: scroll 20s infinite linear;
+      animation: scroll 20s infinite linear;
+    }
+
+    @keyframes scroll {
+      0% {
+        left: 500px;
+      }
+      100% {
+        left: -950px;
+      }
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        left: 500px;
+      }
+      100% {
+        left: -950px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CD Detect</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about-us.html">About Us</a>
+        </li>
+        <li class="active">
+          <a href="test.html">Test</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="contact-us.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <!-- <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <div class="fileinput-preview thumbnail" data-trigger="fileinput" id="window"></div>
+                      <div> -->
+        <div class="scrolling-limit">
+          <div class="scrolling">
+            Please select an Image to check the Dent in a Car!!!
+          </div>
+        </div>
+        <h2>Car Dent Detection</h2>
+        <form action="assessment" method="POST" enctype="multipart/form-data" class="form-inline">
+          <!-- <span class="btn btn-default btn-file">
+                            <span class="fileinput-new">Select Image</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" id="filename" name="file">
+                          </span>
+                          <button type="submit" class="btn btn-default fileinput-exists" id="analyze" onclick="loading();">Submit</button> -->
+          <div class="col-md-6 fileSelector">
+            <input type="file" class="form-control" id="images" name="images" multiple/>
+
+          </div>
+          <div class="col-md-4 uploadBtn">
+            <button type="submit" class="btn btn-labeled btn-primary" id="uploadImage">
+              <span class="btn-label">
+                <i class="glyphicon glyphicon-upload"></i>
+              </span>Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="row" id="image_preview"></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

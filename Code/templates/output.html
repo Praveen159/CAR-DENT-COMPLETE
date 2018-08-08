@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+
+{% block content %}
+        
+	
+		<h2> VERIFYING WHETHER CAR GOT DAMAGED OR NOT </h2>
+		<!-- <h4>OUTPUT</h4> -->
+		{% if result in result1 %}
+		<table class="first">
+			<tr>
+				<th> DAMAGE ASSESMENT</th>
+				
+				<th> VALIDATION</th>
+			</tr>
+			
+			<tr>
+				<td>CAR VALIDATION </td>
+				
+				<td>{{ result }}</td>
+			</tr>
+		</table>		
+			
+		{% else %}
+		<table class="second">	
+			<tr>
+				<th> DAMAGE ASSESMENT</th>
+				
+				<th> VALIDATION</th>
+			</tr>
+			
+			<tr>
+				<td>CAR VALIDATION </td>
+				
+				<td>{{ result[0] }}</td>
+			<tr>
+				<td>SEVERITY VALIDATION</td>
+				<td> Damaged With {{ result[1] }} Injuries </td>
+			</tr>
+
+			
+			
+		</table>
+		{% endif %}
+		
+		
+    
+{% endblock %}
